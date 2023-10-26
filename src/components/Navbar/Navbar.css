@@ -1,0 +1,106 @@
+.navbar {
+  font-size: 14px;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(to top, transparent 0%, rgb(0, 0, 0, 0.3) 50%);
+}
+
+.navbar__scrolled {
+  font-size: 14px;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--main-color);
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__left > img {
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.navbar__right > img {
+  height: 25px;
+  margin-right: 40px;
+}
+
+.navbar__right span {
+  color: white;
+  margin-right: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar__right a {
+  text-decoration: none;
+}
+
+.icon {
+  margin: 0px 15px;
+  cursor: pointer;
+}
+
+.options {
+  display: none;
+  background-color: var(--main-color);
+  border-radius: 5px;
+}
+
+.options > span {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.profile:hover > .options {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+}
+
+.navbar__container {
+  height: 60px;
+  padding: 0px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 700px) {
+  .navbar__home {
+    display: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .navbar__right > img {
+    display: none;
+  }
+  .profile:hover > .options {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 10px;
+  }
+  .navbar__container {
+    width: 90%;
+    height: 60px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
